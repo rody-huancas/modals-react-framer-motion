@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+      --primary: 330 75% 53%;
+      --secondary: 0 0% 97%;
+      --tertiary: 220 3% 91%;
+      --background: 0 0% 100%;
+      --background-secondary: 0 0% 97%;
+      --background-tertiary: 220 3% 91%;
+      --foreground: 0 0% 3.9%;
+      --border: 0 0% 92%;
+      --muted: 60 4.8% 95.9%;
+      --muted-foreground: 25 5.3% 44.7%;
+      --success: 142 83% 45%;
+      --warning: 45 97% 47%;
+      --info: 199 94% 48%;
+      --danger: 0 72% 60%;
+      --radius: 0.5rem;
+    }
+  
+    .dark {
+      --primary: 330 75% 53%;
+      --secondary: 0 0% 8%;
+      --tertiary: 0 0% 15%;
+      --background: 0 0% 3.9%;
+      --background-secondary: 0 0% 8%;
+      --background-tertiary: 0 0% 15%;
+      --foreground: 0 0% 98%;
+      --border: 0 0% 10%;
+      --muted: 12 6.5% 15.1%;
+      --muted-foreground: 24 5.4% 63.9%;
+      --success: 142 83% 45%;
+      --warning: 45 97% 47%;
+      --info: 199 94% 48%;
+      --danger: 0 72% 60%;
+    }
+  }
+  
+  @layer base {
+    body {
+      @apply bg-background text-foreground;
+    }
+  
+    i {
+      margin-top: 0.25rem;
+    }
+  
+    ::-webkit-scrollbar {
+      width: 0;
+    }
+  }
